@@ -1145,6 +1145,7 @@
   });
 
   const profileMenuEl = document.getElementById('profileMenu');
+  const profileBackdropEl = document.getElementById('profileBackdrop');
 
   function renderProfileMenu(){
     const profile = activeProfile();
@@ -1204,9 +1205,13 @@
   function openProfileMenu(){
     renderProfileMenu();
     profileMenuEl.classList.add('show');
+    profileBackdropEl.classList.add('show');
+    profileBackdropEl.setAttribute('aria-hidden','false');
   }
   function closeProfileMenu(){
     profileMenuEl.classList.remove('show');
+    profileBackdropEl.classList.remove('show');
+    profileBackdropEl.setAttribute('aria-hidden','true');
   }
   function toggleProfileMenu(){
     if(profileMenuEl.classList.contains('show')) closeProfileMenu();
@@ -1221,6 +1226,7 @@
     closeProfileMenu();
     openProfileCreateModal();
   });
+  profileBackdropEl.addEventListener('click', closeProfileMenu);
   document.addEventListener('click', (e)=>{
     if(!profileMenuEl.contains(e.target)) closeProfileMenu();
   });
