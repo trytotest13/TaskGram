@@ -43,6 +43,3 @@ Then visit `http://localhost:8000` (or whichever port is shown).
 4. **Context Menu**: Right-click any task or list for options like Pin, Edit, or Delete.
 5. **Bulk Actions**: Click or long-press tasks to select multiple items at once.
 
-## License
-
-MIT
