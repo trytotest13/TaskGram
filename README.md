@@ -32,7 +32,7 @@ Then visit `http://localhost:8000` (or whichever port is shown).
 ## Project Structure
 
 - `index.html` – Page markup and modal overlays.
-- `style.css` – Telegram styling, responsive layout, and dark themes.
+- `style.css` – "Midnight Glass" design system (tokens, layout, motion), responsive rules, and accessibility support.
 - `script.js` – App logic, state management, and local storage sync.
 
 ## How to Use
